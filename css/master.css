@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+:root {
+  --background-color: #fd4646;
+  --char-color: white;
+  --obst-color: #171427;
+}
+
+.game-continer {
+  width: 400px;
+  height: 500px;
+  background-color: var(--background-color);
+  margin: auto;
+  border: 5px solid black;
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.chracter {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 400px;
+  left: 120px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--char-color);
+  z-index: 1000;
+}
+
+.block {
+  width: 100%;
+  height: 20px;
+  background-color: var(--obst-color);
+  position: absolute;
+  animation: moveDown 5s linear forwards;
+  -webkit-animation: moveDown 5s linear forwards;
+}
+
+.hole {
+  width: 70px;
+  height: 20px;
+  background-color: var(--background-color);
+  position: absolute;
+  animation: moveDown 5s linear forwards;
+  -webkit-animation: moveDown 5s linear forwards;
+}
+
+@keyframes moveDown {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 100%;
+    display: none;
+    visibility: hidden;
+  }
+}
